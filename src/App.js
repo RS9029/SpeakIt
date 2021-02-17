@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//imports
+
+import React from 'react';
+import SpeechButton from './components/speech-button';
+import './scss/style.scss';
+import Navbar from './components/Navbar';
+import BotNav from './components/BotNav';
+
+
+
+//App
+
+function App(){
+    return(
+        <div id = "app">
+            <Navbar/>
+            <div id = "speech-grid">
+                <SpeechButton msg = "Hello" />
+                <SpeechButton msg = "I" />
+                <SpeechButton msg = "Want"/>
+            </div>
+            <BotNav/>
+        </div>
+    );
 }
 
 export default App;
